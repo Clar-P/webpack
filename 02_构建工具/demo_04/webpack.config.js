@@ -33,8 +33,17 @@ module.exports = {
             {
                 test:/\.jpg$/i,
                 type:"asset/resource" //图片这种直接资源类型的数据，可以通过指定type来处理，相当于一个webpack内置的loader
-            }
-
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env']
+                  }
+                }
+              }
         ]
    }
 
