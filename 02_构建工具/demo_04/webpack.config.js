@@ -1,4 +1,7 @@
 const path = require("path")
+// 引入html插件
+const HTMLPlugin = require("html-webpack-plugin")
+
 module.exports = {
     mode:"production", // 设置打包的模式：production 表示生产模式  development 开发模式
     // entry:"./hello/hello.js", // 用来指定打包时的主文件 默认 ./src/index.js
@@ -13,7 +16,7 @@ module.exports = {
         path:path.resolve(__dirname," dist"), //指定打包的目录，必须要绝对路径
         // filename:"main.js" ,// 打包后的文件名 
         // filename:"[name]-[id]-[hash].js",   // []里面的表示变量，比如entry是对象时打包两个文件可以 [name].js
-        // clean:true , // 自动清理打包目录
+        clean:true , // 自动清理打包目录
     },  //配置代码打包后的地址
     /* 
         webpack 默认情况下，只会处理js文件，如果我们希望他可以处理其他类型的文件，则需要为其引入loader
@@ -45,6 +48,13 @@ module.exports = {
                 }
               }
         ]
-   }
+   },
+
+   plugins:[
+        new HTMLPlugin({
+            // title:"Hello Webpack"
+            template:"./src/index.html"
+        })
+    ]
 
 }

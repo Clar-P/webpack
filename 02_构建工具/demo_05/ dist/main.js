@@ -1,1 +1,0 @@
-document.body.insertAdjacentHTML("beforeend","<h1>今天天气真不错，风才十二级！</h1>"),document.body.onclick=function(){alert("你点我干啥")};
