@@ -3,7 +3,7 @@
 // 引入图片
 // import An from "./assets/1.jpg"
 
-document.body.insertAdjacentHTML("beforeend","<h1>今天天气真不错，风才十二级！</h1>")
+document.body.insertAdjacentHTML("beforeend","<h1>今天天气真不错，风才十二级！787878878888888</h1>")
 
 
 // const a = 10
